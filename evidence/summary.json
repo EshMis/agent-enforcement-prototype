@@ -1,0 +1,111 @@
+{
+ "n": 80,
+ "hand_class_counts": {
+  "NOT_ENFORCEABLE": 70,
+  "RESOURCE": 3,
+  "EXTERNAL_ACTION": 3,
+  "FILE_SCOPE": 3,
+  "CONCURRENCY": 1
+ },
+ "hand_runtime_enforceable": 10,
+ "hand_runtime_enforceable_pct": 12.5,
+ "wilson95": [
+  6.9,
+  21.5
+ ],
+ "hand_recurrence": {
+  "k": 6,
+  "pct": 7.5,
+  "wilson95": [
+   3.5,
+   15.4
+  ]
+ },
+ "hand_actioned_resolved_by_executable": {
+  "k": 1,
+  "n": 56,
+  "wilson95": [
+   0.3,
+   9.4
+  ]
+ },
+ "agreement": {
+  "v1 rules, sample1": {
+   "class_agree": "18/40",
+   "majority_class_baseline": "32/40",
+   "enforceable_vs_not: tp/fp/fn": [
+    7,
+    21,
+    1
+   ],
+   "recurrence_agree": "34/40"
+  },
+  "v1 rules, sample2": {
+   "class_agree": "10/40",
+   "majority_class_baseline": "38/40",
+   "enforceable_vs_not: tp/fp/fn": [
+    2,
+    28,
+    0
+   ],
+   "recurrence_agree": "34/40"
+  },
+  "v2 rules, sample1 (used to tune v2: not a fair test)": {
+   "class_agree": "35/40",
+   "majority_class_baseline": "32/40",
+   "enforceable_vs_not: tp/fp/fn": [
+    4,
+    1,
+    4
+   ],
+   "recurrence_agree": "36/40"
+  },
+  "v2 rules, sample2 (holdout)": {
+   "class_agree": "34/40",
+   "majority_class_baseline": "38/40",
+   "enforceable_vs_not: tp/fp/fn": [
+    1,
+    4,
+    1
+   ],
+   "recurrence_agree": "40/40"
+  }
+ },
+ "whole_log_counts": {
+  "actioned": 970,
+  "actioned_resolution_mentions_hook_gate_script_v1": 127,
+  "actioned_resolution_names_executable_v2": 33,
+  "actioned_with_resolution_text": 959,
+  "by_class_v1": {
+   "CONCURRENCY": 78,
+   "CREDENTIAL": 75,
+   "EXTERNAL_ACTION": 350,
+   "FILE_SCOPE": 216,
+   "NOT_ENFORCEABLE": 348,
+   "RESOURCE": 267
+  },
+  "by_class_v2": {
+   "CONCURRENCY": 10,
+   "CREDENTIAL": 23,
+   "EXTERNAL_ACTION": 18,
+   "FILE_SCOPE": 25,
+   "NOT_ENFORCEABLE": 1225,
+   "RESOURCE": 33
+  },
+  "by_dir": {
+   "archive": 871,
+   "open": 463
+  },
+  "by_status": {
+   "actioned": 970,
+   "declined": 41,
+   "open": 315,
+   "parked": 5,
+   "superseded": 3
+  },
+  "recurrence_phrase_v1": 319,
+  "recurrence_phrase_v2": 107,
+  "resolution_text_names_2plus_sightings": 163,
+  "total": 1334
+ }
+}

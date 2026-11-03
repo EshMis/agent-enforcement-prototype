@@ -1,0 +1,123 @@
+{
+ "detect": {
+  "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+  "landlock": false,
+  "landlock_abi": -1,
+  "lsm": "capability,yama,selinux,bpf",
+  "machine": "x86_64",
+  "userns_netns": true
+ },
+ "finished": "2026-11-03 10:04:59 JST",
+ "host": "pc057",
+ "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+ "label": "homefs",
+ "python": "3.12.0",
+ "reps": 20,
+ "root": "/home/USER/ai-safety-grants/prototype",
+ "started": "2026-11-03 10:04:09 JST",
+ "traces": {
+  "a1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file": "hello",
+    "log_decisions": [
+     "allow"
+    ],
+    "reply": {
+     "ok": true,
+     "reason": "ok",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "h1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 200,
+    "n": 200,
+    "ok": 200
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 2.4712,
+    "brokered_p95_ms": 2.7236,
+    "brokered_p99_ms": 6.0982,
+    "direct_median_ms": 0.4891,
+    "direct_p95_ms": 0.5688,
+    "n_samples": 4000,
+    "overhead_median_ms": 1.9821,
+    "per_rep_brokered_median_ms": [
+     2.4714,
+     2.4878,
+     2.4699,
+     2.4368,
+     2.405,
+     2.5213,
+     2.524,
+     2.4424,
+     2.4841,
+     2.4985,
+     2.509,
+     2.482,
+     2.428,
+     2.4367,
+     2.4395,
+     2.4537,
+     2.4678,
+     2.4737,
+     2.5217,
+     2.45
+    ]
+   }
+  },
+  "h2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 50,
+    "n": 50,
+    "ok": 50
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 4.233,
+    "brokered_p95_ms": 7.4762,
+    "brokered_p99_ms": 55.3722,
+    "direct_median_ms": 1.5488,
+    "direct_p95_ms": 9.5585,
+    "n_samples": 1000,
+    "overhead_median_ms": 2.6842,
+    "per_rep_brokered_median_ms": [
+     4.2735,
+     4.3453,
+     4.2992,
+     4.4868,
+     4.2459,
+     4.4139,
+     4.1914,
+     4.2564,
+     4.1529,
+     4.2369,
+     4.17,
+     4.2503,
+     4.1251,
+     4.1317,
+     4.0871,
+     4.2415,
+     4.2297,
+     4.2433,
+     4.263,
+     4.0893
+    ]
+   }
+  }
+ },
+ "workdir": "/home/USER/ai-safety-grants/scratch-131459279",
+ "workdir_fstype": "lustre"
+}

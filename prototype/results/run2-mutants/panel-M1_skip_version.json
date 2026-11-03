@@ -1,0 +1,202 @@
+{
+ "detect": {
+  "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+  "landlock": false,
+  "landlock_abi": -1,
+  "lsm": "capability,yama,selinux,bpf",
+  "machine": "x86_64",
+  "userns_netns": true
+ },
+ "finished": "2026-11-03 10:08:13 JST",
+ "host": "pc056",
+ "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+ "label": "M1_skip_version",
+ "python": "3.12.0",
+ "reps": 20,
+ "root": "/tmp/131459944.1.ljobs.q/asg-131459944/M1_skip_version",
+ "started": "2026-11-03 10:08:01 JST",
+ "traces": {
+  "a1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file": "hello",
+    "log_decisions": [
+     "allow"
+    ],
+    "reply": {
+     "ok": true,
+     "reason": "ok",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "b1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file_created": false,
+    "log_decisions": [
+     "deny"
+    ],
+    "reply": {
+     "ok": false,
+     "reason": "out_of_scope",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": false,
+     "qid": 1,
+     "reason": "revoked"
+    },
+    "file_created": false,
+    "log": [
+     [
+      "deny",
+      "revoked"
+     ]
+    ]
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c1b": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 1,
+     "ok": false,
+     "qid": 1,
+     "reason": "revoked"
+    },
+    "file_created": false
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c2": {
+   "all_pass": false,
+   "failures": [
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file_created": true
+    },
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file_created": true
+    },
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file_created": true
+    }
+   ],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": true,
+     "qid": 1,
+     "reason": "ok"
+    },
+    "file_created": true
+   },
+   "pass": 0,
+   "reps": 20
+  },
+  "c3": {
+   "all_pass": false,
+   "failures": [
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file": "queued-again",
+     "recommit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 2,
+      "reason": "ok"
+     }
+    },
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file": "queued-again",
+     "recommit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 2,
+      "reason": "ok"
+     }
+    },
+    {
+     "commit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 1,
+      "reason": "ok"
+     },
+     "file": "queued-again",
+     "recommit": {
+      "current_version": 2,
+      "ok": true,
+      "qid": 2,
+      "reason": "ok"
+     }
+    }
+   ],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": true,
+     "qid": 1,
+     "reason": "ok"
+    },
+    "file": "queued-again",
+    "recommit": {
+     "current_version": 2,
+     "ok": true,
+     "qid": 2,
+     "reason": "ok"
+    }
+   },
+   "pass": 0,
+   "reps": 20
+  }
+ },
+ "workdir": "/tmp/131459944.1.ljobs.q/asg-131459944/w-M1_skip_version",
+ "workdir_fstype": "xfs"
+}

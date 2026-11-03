@@ -1,0 +1,467 @@
+{
+ "detect": {
+  "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+  "landlock": false,
+  "landlock_abi": -1,
+  "lsm": "capability,yama,selinux,bpf",
+  "machine": "x86_64",
+  "userns_netns": true
+ },
+ "finished": "2026-11-03 10:09:59 JST",
+ "host": "pc056",
+ "kernel": "4.18.0-553.171.1.el8_10.x86_64",
+ "label": "main",
+ "python": "3.12.0",
+ "reps": 20,
+ "root": "/home/USER/ai-safety-grants/prototype",
+ "started": "2026-11-03 10:08:01 JST",
+ "traces": {
+  "a1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file": "hello",
+    "log_decisions": [
+     "allow"
+    ],
+    "reply": {
+     "ok": true,
+     "reason": "ok",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "b1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file_created": false,
+    "log_decisions": [
+     "deny"
+    ],
+    "reply": {
+     "ok": false,
+     "reason": "out_of_scope",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "b2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file_created": false,
+    "log_decisions": [
+     "deny"
+    ],
+    "reply": {
+     "ok": false,
+     "reason": "out_of_scope",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "b3": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file_created": false,
+    "log_decisions": [
+     "deny"
+    ],
+    "reply": {
+     "ok": false,
+     "reason": "out_of_scope",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": false,
+     "qid": 1,
+     "reason": "revoked"
+    },
+    "file_created": false,
+    "log": [
+     [
+      "deny",
+      "revoked"
+     ]
+    ]
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c1b": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 1,
+     "ok": false,
+     "qid": 1,
+     "reason": "revoked"
+    },
+    "file_created": false
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": false,
+     "qid": 1,
+     "reason": "stale_version"
+    },
+    "file_created": false
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "c3": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "commit": {
+     "current_version": 2,
+     "ok": false,
+     "qid": 1,
+     "reason": "stale_version"
+    },
+    "file": "queued-again",
+    "recommit": {
+     "current_version": 2,
+     "ok": true,
+     "qid": 2,
+     "reason": "ok"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "d1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "cpu_s": 2.021,
+    "log": [
+     "killed",
+     "cpu_budget_exhausted"
+    ],
+    "signal": 24,
+    "wall_s": 2.038
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "e0": {
+   "all_pass": false,
+   "failures": [
+    {
+     "exit_code": 75,
+     "result": {
+      "allocated_mb": 0,
+      "outcome": "MemoryError"
+     }
+    },
+    {
+     "exit_code": 75,
+     "result": {
+      "allocated_mb": 0,
+      "outcome": "MemoryError"
+     }
+    },
+    {
+     "exit_code": 75,
+     "result": {
+      "allocated_mb": 0,
+      "outcome": "MemoryError"
+     }
+    }
+   ],
+   "first_observed": {
+    "exit_code": 75,
+    "result": {
+     "allocated_mb": 0,
+     "outcome": "MemoryError"
+    }
+   },
+   "pass": 0,
+   "reps": 20
+  },
+  "e0b": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "exit_code": 0,
+    "result": {
+     "allocated_mb": 128,
+     "outcome": "completed"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "e1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "exit_code": 75,
+    "last_progress": [],
+    "result": {
+     "allocated_mb": 0,
+     "outcome": "MemoryError"
+    },
+    "signal": null
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "e1b": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "exit_code": 75,
+    "result": {
+     "allocated_mb": 768,
+     "outcome": "MemoryError"
+    },
+    "signal": null
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "f0": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "attempts": {
+     "create_new": "ok",
+     "exec_shell_redirect": "ok",
+     "mkdir": "ok",
+     "open_append": "ok",
+     "open_rdwr": "ok",
+     "open_wronly_trunc": "ok",
+     "rename": "ok",
+     "symlink": "ok",
+     "truncate": "ok",
+     "unlink": "ENOENT"
+    },
+    "protected_changed": true
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "f1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "attempts": {
+     "create_new": "EPERM",
+     "exec_shell_redirect": "EPERM",
+     "mkdir": "EPERM",
+     "open_append": "EPERM",
+     "open_rdwr": "EPERM",
+     "open_wronly_trunc": "EPERM",
+     "rename": "EPERM",
+     "symlink": "EPERM",
+     "truncate": "EPERM",
+     "unlink": "EPERM"
+    },
+    "protected_changed": false
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "f2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "attempts": {
+     "create_new": "EPERM",
+     "exec_shell_redirect": "EPERM",
+     "mkdir": "EPERM",
+     "open_append": "EPERM",
+     "open_rdwr": "EPERM",
+     "open_wronly_trunc": "EPERM",
+     "rename": "EPERM",
+     "symlink": "EPERM",
+     "truncate": "EPERM",
+     "unlink": "EPERM"
+    },
+    "protected_changed": false
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "f3": {
+   "all_pass": null,
+   "pass": 0,
+   "reps": 20,
+   "skipped": "no Landlock on this node (abi=-1)"
+  },
+  "g0": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "sink_connections": 1,
+    "worker": {
+     "outcome": "connected"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "g1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "sink_connections": 0,
+    "worker": {
+     "error": "EPERM",
+     "msg": "[Errno 1] Operation not permitted",
+     "outcome": "blocked"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "g2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "sink_connections": 0,
+    "worker": {
+     "error": "ENETUNREACH",
+     "msg": "[Errno 101] Network is unreachable",
+     "outcome": "blocked"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "g3": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "sink_connections": 0,
+    "worker": {
+     "error": "EPERM",
+     "msg": "[Errno 1] Operation not permitted",
+     "outcome": "blocked"
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "g4": {
+   "all_pass": null,
+   "pass": 0,
+   "reps": 20,
+   "skipped": "Landlock net rules need ABI 4, node has -1"
+  },
+  "h1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 200,
+    "n": 200,
+    "ok": 200
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 0.2321,
+    "brokered_p95_ms": 0.2593,
+    "brokered_p99_ms": 0.3144,
+    "direct_median_ms": 0.0211,
+    "direct_p95_ms": 0.0272,
+    "n_samples": 4000,
+    "overhead_median_ms": 0.211,
+    "per_rep_brokered_median_ms": [
+     0.2311,
+     0.2306,
+     0.2324,
+     0.2294,
+     0.2385,
+     0.2308,
+     0.2324,
+     0.2255,
+     0.2308,
+     0.2349,
+     0.2335,
+     0.2348,
+     0.2316,
+     0.2344,
+     0.2316,
+     0.233,
+     0.228,
+     0.2336,
+     0.2315,
+     0.2294
+    ]
+   }
+  },
+  "h2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 50,
+    "n": 50,
+    "ok": 50
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 0.3912,
+    "brokered_p95_ms": 0.4612,
+    "brokered_p99_ms": 1.2576,
+    "direct_median_ms": 0.0968,
+    "direct_p95_ms": 0.1261,
+    "n_samples": 1000,
+    "overhead_median_ms": 0.2944,
+    "per_rep_brokered_median_ms": [
+     0.3699,
+     0.3978,
+     0.41,
+     0.3942,
+     0.3844,
+     0.3851,
+     0.3886,
+     0.3786,
+     0.3774,
+     0.3806,
+     0.3941,
+     0.4436,
+     0.3917,
+     0.3782,
+     0.3735,
+     0.4057,
+     0.3993,
+     0.38,
+     0.4027,
+     0.3967
+    ]
+   }
+  }
+ },
+ "workdir": "/tmp/131459942.1.ljobs.q/asg-131459942/w",
+ "workdir_fstype": "xfs"
+}

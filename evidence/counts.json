@@ -1,0 +1,38 @@
+{
+ "actioned": 970,
+ "actioned_resolution_mentions_hook_gate_script_v1": 127,
+ "actioned_resolution_names_executable_v2": 33,
+ "actioned_with_resolution_text": 959,
+ "by_class_v1": {
+  "CONCURRENCY": 78,
+  "CREDENTIAL": 75,
+  "EXTERNAL_ACTION": 350,
+  "FILE_SCOPE": 216,
+  "NOT_ENFORCEABLE": 348,
+  "RESOURCE": 267
+ },
+ "by_class_v2": {
+  "CONCURRENCY": 10,
+  "CREDENTIAL": 23,
+  "EXTERNAL_ACTION": 18,
+  "FILE_SCOPE": 25,
+  "NOT_ENFORCEABLE": 1225,
+  "RESOURCE": 33
+ },
+ "by_dir": {
+  "archive": 871,
+  "open": 463
+ },
+ "by_status": {
+  "actioned": 970,
+  "declined": 41,
+  "open": 315,
+  "parked": 5,
+  "superseded": 3
+ },
+ "log_dir": "<private observation log>",
+ "recurrence_phrase_v1": 319,
+ "recurrence_phrase_v2": 107,
+ "resolution_text_names_2plus_sightings": 163,
+ "total": 1334
+}

@@ -1,0 +1,19 @@
+job=131459279 host=pc057 kernel=4.18.0-553.171.1.el8_10.x86_64 mode=main reps=20 date=2026-11-03 10:03:01 JST
+python=Python 3.12.0 scratch=/tmp/131459279.1.ljobs.q/asg-131459279 fs=xfs
+a1   20/20 PASS
+b1   20/20 PASS
+b2   20/20 PASS
+b3   20/20 PASS
+c1   20/20 PASS
+c1b  20/20 PASS
+c2   20/20 PASS
+c3   20/20 PASS
+d1   20/20 PASS
+e1   20/20 PASS
+e0    0/20 FAIL
+f1   20/20 PASS
+f2   20/20 PASS
+a1   20/20 PASS
+h1   20/20 PASS
+h2   20/20 PASS
+done 2026-11-03 10:04:59 JST

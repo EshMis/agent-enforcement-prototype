@@ -1,0 +1,9 @@
+job=131458624 host=hc025 kernel=5.14.0-687.54.1.el9_8.x86_64 mode=smoke reps=1 date=2026-11-03 09:58:35 JST
+python=Python 3.12.0 scratch=/tmp/131458624.1.ljobs.q/asg-131458624 fs=xfs
+a1    1/1  PASS
+b1    1/1  PASS
+c1    1/1  PASS
+d1    1/1  PASS
+f1    1/1  PASS
+g1    1/1  PASS
+done 2026-11-03 09:58:38 JST

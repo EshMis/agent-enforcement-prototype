@@ -1,0 +1,123 @@
+{
+ "detect": {
+  "kernel": "5.14.0-687.54.1.el9_8.x86_64",
+  "landlock": true,
+  "landlock_abi": 6,
+  "lsm": "unreadable:[Errno 2] No such file or directory: '/sys/kernel/security/lsm'",
+  "machine": "x86_64",
+  "userns_netns": true
+ },
+ "finished": "2026-11-03 10:05:27 JST",
+ "host": "hc025",
+ "kernel": "5.14.0-687.54.1.el9_8.x86_64",
+ "label": "homefs",
+ "python": "3.12.0",
+ "reps": 20,
+ "root": "/home/USER/ai-safety-grants/prototype",
+ "started": "2026-11-03 10:04:56 JST",
+ "traces": {
+  "a1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "file": "hello",
+    "log_decisions": [
+     "allow"
+    ],
+    "reply": {
+     "ok": true,
+     "reason": "ok",
+     "version": 1
+    }
+   },
+   "pass": 20,
+   "reps": 20
+  },
+  "h1": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 200,
+    "n": 200,
+    "ok": 200
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 2.2259,
+    "brokered_p95_ms": 3.0062,
+    "brokered_p99_ms": 3.9581,
+    "direct_median_ms": 0.4581,
+    "direct_p95_ms": 0.5894,
+    "n_samples": 4000,
+    "overhead_median_ms": 1.7678,
+    "per_rep_brokered_median_ms": [
+     2.3638,
+     2.2204,
+     2.1376,
+     2.1156,
+     2.2212,
+     2.1313,
+     2.1355,
+     2.6081,
+     2.8402,
+     2.5695,
+     2.3212,
+     2.4287,
+     2.1643,
+     2.1404,
+     2.0814,
+     2.1157,
+     2.154,
+     2.7439,
+     2.167,
+     2.2188
+    ]
+   }
+  },
+  "h2": {
+   "all_pass": true,
+   "failures": [],
+   "first_observed": {
+    "files": 50,
+    "n": 50,
+    "ok": 50
+   },
+   "pass": 20,
+   "reps": 20,
+   "timing": {
+    "brokered_median_ms": 4.2249,
+    "brokered_p95_ms": 13.9389,
+    "brokered_p99_ms": 45.0588,
+    "direct_median_ms": 1.5211,
+    "direct_p95_ms": 3.4648,
+    "n_samples": 1000,
+    "overhead_median_ms": 2.7039,
+    "per_rep_brokered_median_ms": [
+     3.8567,
+     4.0423,
+     14.9194,
+     4.1995,
+     3.9617,
+     4.7035,
+     4.4353,
+     3.8362,
+     3.8279,
+     3.9983,
+     4.8713,
+     3.8889,
+     4.7566,
+     4.0267,
+     4.1016,
+     4.7458,
+     4.0684,
+     4.6179,
+     4.1603,
+     3.7995
+    ]
+   }
+  }
+ },
+ "workdir": "/home/USER/ai-safety-grants/scratch-131459267",
+ "workdir_fstype": "lustre"
+}

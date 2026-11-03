@@ -1,0 +1,110 @@
+== host/date
+pc057
+2026年 11月  3日 火曜日 09:51:22 JST
+== uname -a
+Linux pc057 4.18.0-553.171.1.el8_10.x86_64 #1 SMP Sun Oct 4 20:59:33 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+== /etc/os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.10 (Ootpa)"
+ID="rhel"
+== /sys/kernel/security/lsm
+capability,yama,selinux,bpf== python3 candidates
+/usr/local/package/python/3.12.0/bin/python3
+Python 3.12.0
+3.12.0
+== unshare -Urn true
+rc=0
+== unshare -Ur id
+uid=0(root) gid=0(root) groups=0(root),65534(nobody)
+rc=0
+== unshare -n true (no user ns)
+unshare: 共有の解除に失敗しました: 許可されていない操作です
+rc=1
+== user.max_user_namespaces
+3092024
+== kernel.unprivileged_userns_clone
+cat: /proc/sys/kernel/unprivileged_userns_clone: そのようなファイルやディレクトリはありません
+== cgroup mounts
+tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0
+cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd 0 0
+cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0
+cgroup /sys/fs/cgroup/net_cls,net_prio cgroup rw,nosuid,nodev,noexec,relatime,net_cls,net_prio 0 0
+cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0
+cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0
+cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0
+cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0
+cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0
+cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0
+cgroup /sys/fs/cgroup/rdma cgroup rw,nosuid,nodev,noexec,relatime,rdma 0 0
+cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0
+cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0
+== /sys/fs/cgroup
+blkio
+cpu
+cpu,cpuacct
+cpuacct
+cpuset
+devices
+freezer
+hugetlb
+memory
+net_cls
+net_cls,net_prio
+net_prio
+perf_event
+pids
+rdma
+systemd
+== cgroup.controllers
+cat: /sys/fs/cgroup/cgroup.controllers: そのようなファイルやディレクトリはありません
+== own cgroup
+12:devices:/user.slice
+11:perf_event:/
+10:rdma:/
+9:memory:/user.slice/user-0.slice/session-c17.scope
+8:freezer:/
+7:blkio:/user.slice
+6:cpuset:/AGE/131457719.1/master
+5:hugetlb:/
+4:cpu,cpuacct:/user.slice
+3:net_cls,net_prio:/
+2:pids:/user.slice/user-0.slice/session-c17.scope
+1:name=systemd:/user.slice/user-0.slice/session-c17.scope
+== writable cgroup check
+not writable: /sys/fs/cgroup
+not writable: /sys/fs/cgroup/memory
+not writable: /sys/fs/cgroup/cpu
+not writable: /sys/fs/cgroup/cpuacct
+not writable: /sys/fs/cgroup/user.slice
+not writable: /sys/fs/cgroup/
+not writable: /sys/fs/cgroup/
+mkdir: ディレクトリ `/sys/fs/cgroup/asg_test' を作成できません: 読み込み専用ファイルシステムです
+mkdir cgroup rc=1
+== ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 3092024
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 65535
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 3092024
+virtual memory          (kbytes, -v) 2097152
+file locks                      (-x) unlimited
+== seccomp/NoNewPrivs
+NoNewPrivs:	0
+Seccomp:	0
+== python probes
+-- python3
+{"python": "3.12.0", "platform": "Linux-4.18.0-553.171.1.el8_10.x86_64-x86_64-with-glibc2.28", "landlock_abi_version": -1, "landlock_errno": 38, "landlock_errno_name": "Function not implemented", "RLIMIT_CPU": [-1, -1], "RLIMIT_CPU_set_ok": true, "RLIMIT_AS": [2147483648, -1], "RLIMIT_AS_set_ok": true, "RLIMIT_NPROC": [3092024, 3092024], "RLIMIT_NPROC_set_ok": true, "prctl_no_new_privs": 0}
+-- /usr/local/package/python/3.12.0/bin/python
+{"python": "3.12.0", "platform": "Linux-4.18.0-553.171.1.el8_10.x86_64-x86_64-with-glibc2.28", "landlock_abi_version": -1, "landlock_errno": 38, "landlock_errno_name": "Function not implemented", "RLIMIT_CPU": [-1, -1], "RLIMIT_CPU_set_ok": true, "RLIMIT_AS": [2147483648, -1], "RLIMIT_AS_set_ok": true, "RLIMIT_NPROC": [3092024, 3092024], "RLIMIT_NPROC_set_ok": true, "prctl_no_new_privs": 0}
+-- /home/USER/faceflow/conda/envs/ff/bin/python
+{"python": "3.12.14", "platform": "Linux-4.18.0-553.171.1.el8_10.x86_64-x86_64-with-glibc2.28", "landlock_abi_version": -1, "landlock_errno": 38, "landlock_errno_name": "Function not implemented", "RLIMIT_CPU": [-1, -1], "RLIMIT_CPU_set_ok": true, "RLIMIT_AS": [2147483648, -1], "RLIMIT_AS_set_ok": true, "RLIMIT_NPROC": [3092024, 3092024], "RLIMIT_NPROC_set_ok": true, "prctl_no_new_privs": 0}
+== done

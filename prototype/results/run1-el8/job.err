@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/hshare1/ZETTAI_path_WA_slash_home_KARA/home/USER/ai-safety-grants/prototype/panel.py", line 367, in <module>
+    main()
+  File "/hshare1/ZETTAI_path_WA_slash_home_KARA/home/USER/ai-safety-grants/prototype/panel.py", line 332, in main
+    shutil.copy(run.logpath, os.path.join(keep, "%s.decisions.log" % tid))
+  File "/usr/local/package/python/3.12.0/lib/python3.12/shutil.py", line 423, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/package/python/3.12.0/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/131459279.1.ljobs.q/asg-131459279/w/f3-00/decisions.log'

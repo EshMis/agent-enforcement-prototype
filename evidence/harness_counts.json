@@ -1,0 +1,74 @@
+{
+ "journal": {
+  "rows": 46512,
+  "window": [
+   "2026-10-15 13:47 PDT",
+   "2026-11-02 17:06 PST"
+  ],
+  "rows_with_wrote_true": 14285,
+  "distinct_session_ids": 188,
+  "fields": [
+   "agent_id",
+   "cwd",
+   "session_id",
+   "target",
+   "tool",
+   "ts",
+   "writes",
+   "wrote"
+  ],
+  "tools_top": [
+   [
+    "Bash",
+    45257
+   ],
+   [
+    "Write",
+    731
+   ],
+   [
+    "Edit",
+    524
+   ]
+  ],
+  "has_outcome_or_denied_field": false
+ },
+ "hook_health": {
+  "rows": 416,
+  "window": [
+   "2026-10-27 12:09 PDT",
+   "2026-11-02 16:58 PST"
+  ],
+  "stop_hook_runs": 414,
+  "stop_runs_by_blocked_gate_count": {
+   "0": 396,
+   "1": 15,
+   "2": 3
+  },
+  "stop_gate_blocks_total": 21,
+  "stop_runs_with_at_least_one_block": 18,
+  "pretooluse_rows": 2,
+  "pretooluse_denied_rows": 2,
+  "pretooluse_denials": [
+   "2026-11-01 14:12 PST denied: [resource gate] Refused: a commit/push/PR is chained after a test whose exit status a pipe or `;` disc",
+   "2026-11-01 14:49 PST denied: [resource gate] Refused: `codex exec` with no stdin redirect waits on open stdin (\"Reading additional "
+  ]
+ },
+ "resource_governor": {
+  "rows": 260,
+  "window": [
+   "2026-10-01 00:49 PDT",
+   "2026-10-25 22:40 PDT"
+  ],
+  "by_action_why": {
+   "('would-kill', 'orphaned mcp')": 2,
+   "('kill', 'orphaned mcp')": 3,
+   "('kill', 'orphaned browser')": 236,
+   "('kill', 'orphaned test')": 6,
+   "('would-kill', 'orphaned browser')": 5,
+   "('kill', 'orphaned dev')": 6,
+   "('would-kill', 'orphaned dev')": 1,
+   "('kill', 'critical pressure, largest agent job')": 1
+  }
+ }
+}

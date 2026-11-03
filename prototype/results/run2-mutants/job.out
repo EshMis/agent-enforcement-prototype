@@ -1,0 +1,24 @@
+job=131459944 host=pc056 kernel=4.18.0-553.171.1.el8_10.x86_64 mode=mutants reps=20 date=2026-11-03 10:08:01 JST
+python=Python 3.12.0 scratch=/tmp/131459944.1.ljobs.q/asg-131459944 fs=xfs
+mutated M1_skip_version -> /tmp/131459944.1.ljobs.q/asg-131459944/M1_skip_version/runtime/broker.py
+a1   20/20 PASS
+b1   20/20 PASS
+c1   20/20 PASS
+c1b  20/20 PASS
+c2    0/20 FAIL
+c3    0/20 FAIL
+mutated M2_skip_revoked -> /tmp/131459944.1.ljobs.q/asg-131459944/M2_skip_revoked/runtime/broker.py
+a1   20/20 PASS
+b1   20/20 PASS
+c1   20/20 PASS
+c1b   0/20 FAIL
+c2   20/20 PASS
+c3   20/20 PASS
+mutated M3_snapshot_recheck -> /tmp/131459944.1.ljobs.q/asg-131459944/M3_snapshot_recheck/runtime/broker.py
+a1   20/20 PASS
+b1   20/20 PASS
+c1    0/20 FAIL
+c1b   0/20 FAIL
+c2    0/20 FAIL
+c3    0/20 FAIL
+done 2026-11-03 10:08:38 JST

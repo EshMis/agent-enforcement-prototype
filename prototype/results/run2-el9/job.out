@@ -1,0 +1,30 @@
+job=131459920 host=hc017 kernel=5.14.0-687.54.1.el9_8.x86_64 mode=main reps=20 date=2026-11-03 10:08:01 JST
+python=Python 3.12.0 scratch=/tmp/131459920.1.mjobs.q/asg-131459920 fs=xfs
+a1   20/20 PASS
+b1   20/20 PASS
+b2   20/20 PASS
+b3   20/20 PASS
+c1   20/20 PASS
+c1b  20/20 PASS
+c2   20/20 PASS
+c3   20/20 PASS
+d1   20/20 PASS
+e1   20/20 PASS
+e0    0/20 FAIL
+e1b  20/20 PASS
+e0b  20/20 PASS
+f1   20/20 PASS
+f2   20/20 PASS
+f3   20/20 PASS
+f0   20/20 PASS
+g1   20/20 PASS
+g2   20/20 PASS
+g3   20/20 PASS
+g4   20/20 PASS
+g0   20/20 PASS
+h1   20/20 PASS
+h2   20/20 PASS
+a1   20/20 PASS
+h1   20/20 PASS
+h2   20/20 PASS
+done 2026-11-03 10:13:17 JST

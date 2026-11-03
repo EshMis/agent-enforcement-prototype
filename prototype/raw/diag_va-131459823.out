@@ -1,0 +1,12 @@
+host=pc057 kernel=4.18.0-553.171.1.el8_10.x86_64
+-- no extra limit (SGE s_vmem=2G only)
+RESULT {"VmPeak": "266856 kB", "VmSize": "266856 kB", "VmRSS": "12772 kB", "RLIMIT_AS": [2147483648, -1], "alloc16MiB": "ok"}
+-- RLIMIT_AS=256MiB
+-- RLIMIT_AS=512MiB
+RESULT {"VmPeak": "266856 kB", "VmSize": "266856 kB", "VmRSS": "12792 kB", "RLIMIT_AS": [536870912, 536870912], "alloc16MiB": "ok"}
+-- RLIMIT_AS=1024MiB
+RESULT {"VmPeak": "266856 kB", "VmSize": "266856 kB", "VmRSS": "14680 kB", "RLIMIT_AS": [1073741824, 1073741824], "alloc16MiB": "ok"}
+---ERR
+  File "/usr/local/package/python/3.12.0/lib/python3.12/socket.py", line 551, in <module>
+    import array
+ImportError: /usr/local/package/python/3.12.0/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so: failed to map segment from shared object

@@ -1,0 +1,6 @@
+Hand review (2026-11-03) of the 33 observations whose resolution text matched RES_EXEC_V2 in classify.py.
+Real executable change (hook, gate, script, checker, test) - 26:
+  357 846 1143 1145 1248 1249 1268 1276 1284 1295 1296 42 87 182 324 325 330 467 656 687 964 972 1024 1028 1039 1092
+Permission configuration in settings.json, not code - 1:  1142
+Regex hit but the resolution is prose / a pre-existing hook / an unapplied fix - 6:  12 66 90 641 702 799
+Total 26 + 1 + 6 = 33.
